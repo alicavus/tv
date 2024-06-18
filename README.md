@@ -1,7 +1,7 @@
 Prerequisites
 ------
 - `bash`, `curl`, `grep`, `coreutils`, `jq`
-- media player, capable of http streaming (`vlc`, `mpv`)
+- media player, capable of playing http streams (`vlc`, `mpv`)
 - living in 🇧🇬
 
 Installation
