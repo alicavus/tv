@@ -1,0 +1,42 @@
+#! /bin/bash
+
+case "$1" in
+    "nova")
+        R="https://i.cdn.bg/live/0OmMKJ4SgY"
+        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "novanews")
+        R="https://i.cdn.bg/live/gR2Z8WMYyc"
+        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "btv")
+        R="https://btvplus.bg"
+        URL=`curl -e $R -o - https://btvplus.bg/lbin/v3/btvplus/player_config.php?media_id=2110383625 | jq .info.file | cut -d \" -f2`
+        URL=${URL/.m3u8/_low.m3u8}
+        ;;
+    "bnt" | "bnt1")
+        R="https://i.cdn.bg/live/iSj2d0XAPa"
+        URL=`curl -e https://tv.bnt.bg/bnt1subs $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "bnt2")
+        R="https://i.cdn.bg/live/ZBPbdxDHm7"
+        URL=`curl -e https://tv.bnt.bg/bnt2 $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "bnt3")
+        R="https://i.cdn.bg/live/OQ70Ds9Lcp"
+        URL=`curl -e https://tv.bnt.bg/bnt3 $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "bnt4")
+        R="https://i.cdn.bg/live/ls4wHAbTmY"
+        URL=`curl -e https://tv.bnt.bg/bnt4 $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    *)
+        echo "Unknown channel: $1"
+        ;;
+esac
+
+[[ -n $URL ]] && [[ ! $URL =~ "http" ]] && URL="https:$URL"
+
+# [[ -n $URL ]] && vlc --http-referrer=$R $URL
+
+[[ -n $URL ]] && mpv --force-seekable --force-window --referrer=$R $URL

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=BNT1
+Comment=Watch BNT1
+Icon=/usr/share/icons/hicolor/48x48/bnt1.png
+Exec=sh -c "tv bnt"
+Terminal=false
+Categories=TV;
+Keywords=tv;bnt1;

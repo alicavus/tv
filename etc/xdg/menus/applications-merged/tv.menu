@@ -1,0 +1,18 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+"http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<Menu>
+	<Name>TV</Name>
+	<Menu>
+		<Name>TV</Name>
+		<Directory>tv.directory</Directory>
+			<Include>
+				<Filename>bnt1.desktop</Filename>
+				<Filename>bnt2.desktop</Filename>
+				<Filename>bnt3.desktop</Filename>
+				<Filename>bnt4.desktop</Filename>
+				<Filename>btv.desktop</Filename>
+				<Filename>nova.desktop</Filename>
+				<Filename>novanews.desktop</Filename>
+		</Include>
+	</Menu>
+</Menu>
