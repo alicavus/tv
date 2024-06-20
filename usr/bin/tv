@@ -30,6 +30,11 @@ case "$1" in
         R="https://i.cdn.bg/live/ls4wHAbTmY"
         URL=`curl -e https://tv.bnt.bg/bnt4 $R | grep m3u8 | cut -d \" -f2`
         ;;
+    "parliament")
+        # https://parliament.bg/js/app.js
+        R="https://parliament.bg/bg/video"
+        URL=`curl -o - -e $R https://parliament.bg/js/app.js --insecure |  sed "s:\":\n:g" | grep http | grep .m3u8 | head -n 1`
+        ;;
     *)
         echo "Unknown channel: $1"
         ;;
