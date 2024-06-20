@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=BG ON AIR
+Comment=Watch BG AIR
+Icon=/usr/share/icons/hicolor/128x128/bgonair.png
+Exec=sh -c "tv bgonair"
+Terminal=false
+Categories=TV;
+Keywords=tv;bgonair;

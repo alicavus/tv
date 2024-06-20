@@ -30,6 +30,10 @@ case "$1" in
         R="https://i.cdn.bg/live/ls4wHAbTmY"
         URL=`curl -e https://tv.bnt.bg/bnt4 $R | grep m3u8 | cut -d \" -f2`
         ;;
+    "bgonair")
+        R="https://i.cdn.bg/live/DUH6Ngk5qd"
+        URL=`curl -e https://www.bgonair.bg/tvonline $R | grep m3u8 | cut -d \" -f2`
+        ;;
     "parliament")
         # https://parliament.bg/js/app.js
         R="https://parliament.bg/bg/video"
