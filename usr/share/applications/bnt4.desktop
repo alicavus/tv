@@ -2,7 +2,7 @@
 Type=Application
 Name=BNT4
 Comment=Watch BNT4
-Icon=/usr/share/icons/hicolor/48x48/bnt4.png
+Icon=/usr/share/tv/icons/bnt4.png
 Exec=sh -c "tv bnt4"
 Terminal=false
 Categories=TV;

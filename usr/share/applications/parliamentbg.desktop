@@ -2,7 +2,7 @@
 Type=Application
 Name=Narodno Sabranie
 Comment=Watch plenary session of Narodno Sabranie
-Icon=/usr/share/icons/hicolor/128x128/parliamentbg.png
+Icon=/usr/share/tv/icons/parliamentbg.png
 Exec=sh -c "tv parliament"
 Terminal=false
 Categories=TV;

@@ -2,7 +2,7 @@
 Type=Application
 Name=Nova News
 Comment=Watch Nova News
-Icon=/usr/share/icons/hicolor/128x128/NOVANEWS.png
+Icon=/usr/share/tv/icons/NOVANEWS.png
 Exec=sh -c "tv novanews"
 Terminal=false
 Categories=TV;

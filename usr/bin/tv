@@ -35,9 +35,16 @@ case "$1" in
         URL=`curl -e https://www.bgonair.bg/tvonline $R | grep m3u8 | cut -d \" -f2`
         ;;
     "parliament")
-        # https://parliament.bg/js/app.js
         R="https://parliament.bg/bg/video"
         URL=`curl -o - -e $R https://parliament.bg/js/app.js --insecure |  sed "s:\":\n:g" | grep http | grep .m3u8 | head -n 1`
+        ;;
+    "bnteuro2024")
+        R="https://i.cdn.bg/live/qhaO0ZRSB2"
+        URL=`curl -e https://bntnews.bg/euro2024 $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "gongeuro2024")
+        R="https://i.cdn.bg/live/3hemJF7xnN"
+        URL=`curl -e https://gong.bg/euro/programa $R | grep m3u8 | cut -d \" -f2`
         ;;
     *)
         echo "Unknown channel: $1"

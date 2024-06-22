@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Euro 2024 Livestream (GONG BG)
+Comment=Watch Euro 2024 Livestream on GONG BG
+Icon=/usr/share/tv/icons/euro2024.png
+Exec=sh -c "tv gongeuro2024"
+Terminal=false
+Categories=TV;
+Keywords=tv;euro2024;

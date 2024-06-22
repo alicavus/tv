@@ -2,7 +2,7 @@
 Type=Application
 Name=Nova TV
 Comment=Watch Nova TV
-Icon=/usr/share/icons/hicolor/128x128/NOVA.png
+Icon=/usr/share/tv/icons/NOVA.png
 Exec=sh -c "tv nova"
 Terminal=false
 Categories=TV;

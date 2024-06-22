@@ -2,7 +2,7 @@
 Type=Application
 Name=btv
 Comment=Watch btv
-Icon=/usr/share/icons/hicolor/128x128/btv.png
+Icon=/usr/share/tv/icons/btv.png
 Exec=sh -c "tv btv"
 Terminal=false
 Categories=TV;
