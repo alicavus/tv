@@ -6,15 +6,7 @@
 		<Name>TV</Name>
 		<Directory>tv.directory</Directory>
 			<Include>
-				<Filename>bgonair.desktop</Filename>
-				<Filename>bnt1.desktop</Filename>
-				<Filename>bnt2.desktop</Filename>
-				<Filename>bnt3.desktop</Filename>
-				<Filename>bnt4.desktop</Filename>
-				<Filename>btv.desktop</Filename>
-				<Filename>nova.desktop</Filename>
-				<Filename>novanews.desktop</Filename>
-				<Filename>parliamentbg.desktop</Filename>
-		</Include>
+				<Category>TV</Category>
+			</Include>
 	</Menu>
 </Menu>
