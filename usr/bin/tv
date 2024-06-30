@@ -1,18 +1,9 @@
 #! /bin/bash
 
 case "$1" in
-    "nova")
-        R="https://i.cdn.bg/live/0OmMKJ4SgY"
-        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
-        ;;
-    "novanews")
-        R="https://i.cdn.bg/live/gR2Z8WMYyc"
-        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
-        ;;
-    "btv")
-        R="https://btvplus.bg"
-        URL=`curl -e $R -o - https://btvplus.bg/lbin/v3/btvplus/player_config.php?media_id=2110383625 | jq .info.file | cut -d \" -f2`
-        URL=${URL/.m3u8/_low.m3u8}
+    "bgonair")
+        R="https://i.cdn.bg/live/DUH6Ngk5qd"
+        URL=`curl -e https://www.bgonair.bg/tvonline $R | grep m3u8 | cut -d \" -f2`
         ;;
     "bnt" | "bnt1")
         R="https://i.cdn.bg/live/iSj2d0XAPa"
@@ -30,14 +21,36 @@ case "$1" in
         R="https://i.cdn.bg/live/ls4wHAbTmY"
         URL=`curl -e https://tv.bnt.bg/bnt4 $R | grep m3u8 | cut -d \" -f2`
         ;;
-    "bgonair")
-        R="https://i.cdn.bg/live/DUH6Ngk5qd"
-        URL=`curl -e https://www.bgonair.bg/tvonline $R | grep m3u8 | cut -d \" -f2`
+    "btv")
+        R="https://btvplus.bg"
+        URL=`curl -e $R -o - https://btvplus.bg/lbin/v3/btvplus/player_config.php?media_id=2110383625 | jq .info.file | cut -d \" -f2`
+        URL=${URL/.m3u8/_low.m3u8}
+        ;;
+    "city")
+        R="https://www.city.bg/live"
+        URL=`curl -e ${R%/live} $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "eurocom")
+        R="https://eurocom.bg/live"
+        URL=`curl -e ${R%/live} $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "nova")
+        R="https://i.cdn.bg/live/0OmMKJ4SgY"
+        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
+        ;;
+    "novanews")
+        R="https://i.cdn.bg/live/gR2Z8WMYyc"
+        URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
         ;;
     "parliament")
         R="https://parliament.bg/bg/video"
-        URL=`curl -o - -e $R https://parliament.bg/js/app.js --insecure |  sed "s:\":\n:g" | grep http | grep .m3u8 | head -n 1`
+        URL=`curl -o - -e $R https://parliament.bg/js/app.js --insecure | sed "s:\":\n:g" | grep http | grep .m3u8 | head -n 1`
         ;;
+    "tv1")
+        R="https://tv1.bg"
+        URL=`curl -e $R $R | sed "s:\":\n:g" | grep .m3u8 | cut -d \" -f2`
+        ;;
+# Temporary Euro 2024 Livestream
     "bnteuro")
         R="https://i.cdn.bg/live/qhaO0ZRSB2"
         URL=`curl -e https://bntnews.bg/euro2024 $R | grep m3u8 | cut -d \" -f2`
@@ -54,6 +67,7 @@ case "$1" in
         R="https://i.cdn.bg/live/NrP1I4C7tH"
         URL=`curl -e https://gong.bg/euro/programa $R | grep m3u8 | cut -d \" -f2`
         ;;
+# Here is the end of temporary streams
     *)
         echo "Unknown channel: $1"
         ;;

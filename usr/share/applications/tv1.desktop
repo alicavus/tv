@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=TV1
+Comment=Watch TV1
+Icon=/usr/share/tv/icons/tv1.png
+Exec=sh -c "tv tv1"
+Terminal=false
+Categories=TV;
+Keywords=tv;tv1;

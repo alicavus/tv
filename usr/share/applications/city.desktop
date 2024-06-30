@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CITY
+Comment=Watch CITY
+Icon=/usr/share/tv/icons/city.png
+Exec=sh -c "tv city"
+Terminal=false
+Categories=TV;
+Keywords=tv;city;citytv;
