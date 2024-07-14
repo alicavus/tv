@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Euro 2024 Livestream (BNT)
-Comment=Watch Euro 2024 Livestream on BNT
-Icon=/usr/share/tv/icons/euro2024.png
-Exec=sh -c "tv bnteuro"
-Terminal=false
-Categories=TV;
-Keywords=tv;euro2024;
