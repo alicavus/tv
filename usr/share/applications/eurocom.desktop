@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Eurocom
-Comment=Watch Eurocom
-Icon=/usr/share/tv/icons/eurocom.png
-Exec=sh -c "tv eurocom"
-Terminal=false
-Categories=TV;
-Keywords=tv;eurocom;

@@ -30,10 +30,6 @@ case "$1" in
         R="https://www.city.bg/live"
         URL=`curl -e ${R%/live} $R | grep m3u8 | cut -d \" -f2`
         ;;
-    "eurocom")
-        R="https://eurocom.bg/live"
-        URL=`curl -e ${R%/live} $R | grep .m3u8 | sed -e "s:\":\n:g" | grep .m3u8\$`
-        ;;
     "nova")
         R="https://i.cdn.bg/live/0OmMKJ4SgY"
         URL=`curl -e https://nova.bg/live $R | grep m3u8 | cut -d \" -f2`
@@ -61,4 +57,4 @@ esac
 
 [[ -n $URL ]] && mpv --force-seekable --force-window --referrer=$R $URL &
 
-killall -9 ${0#*/}
+killall -9 ${0##*/}
