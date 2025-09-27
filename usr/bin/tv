@@ -24,7 +24,6 @@ case "$1" in
     "btv")
         R="https://btvplus.bg"
         URL=`curl -e $R -o - https://btvplus.bg/lbin/v3/btvplus/player_config.php?media_id=2110383625 | jq .info.file | cut -d \" -f2`
-        URL=${URL/.m3u8/_low.m3u8}
         ;;
     "city")
         R="https://www.city.bg/live"
